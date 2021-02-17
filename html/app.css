@@ -1,21 +1,21 @@
-li { list-style:none; display:block;}
+li { list-style:none; margin:5px; padding:5px;}
 
 .comment {  border-radius:50px; background-color:rbg(4, 240, 4); display:inline-block;}
 
 .content {width:100%; height: 80%;}
 
-.msgPost {width:100%; text-align:center; position:fixed; z-index: 10; margin: 0 atuo;}
+.msgPost {width:100%; text-align:center; position:fixed; z-index: 10; margin: 0 auto;}
 
 textarea {border-radius:50px;}
 
 input {border-radius:50px; background-color:rgb(4, 241, 4); color:black; border: solid 0px; margin:10px 10px;}
 
-.myMsg {border-radius:50px; background-color:rgb(4, 241, 4); margin:5px; padding:5px; display:inline-table;}
+.mymsg li {border-radius:50px; background-color:rgb(4, 241, 4); display:table; margin: 0 auto; margin-bottom: 10px;}
 
-.otherMsg {border-radius:50px; background-color:white; margin: 5px; padding:5px; display:inline-table;}
+.othermsg li {border-radius:50px; background-color:white; display:table; margin-bottom: 10px;}
 
-.myZone { float:right; width: 600px; text-align:center;}
+.myZone { float:right; width: 300px; text-align:center;}
 
-.othreZone { float:left; width: 600px;}
+.othreZone { float:left; width: 300px; text-align:center;}
 
 body { background-image: url(/img/line_background.jpeg);background-color:rgba(255, 255, 255, 0.4); background-blend-mode:lighten;}

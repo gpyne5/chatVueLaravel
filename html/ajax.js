@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     let xhr = new XMLHttpRequest();
+    let xhrPost = new XMLHttpRequest();
 
     let result = document.getElementById('result');
     let myMsg = document.getElementById('mymsg');
@@ -45,13 +46,29 @@ document.addEventListener('DOMContentLoaded', function(){
             result.textContent = '';
         }
     };
-    document.getElementById('submit').addEventListener('click', function(){
-        xhr.open('GET', '../rest/')
-    })
 
-    setInterval(function(){
-        xhr.open('GET', '../rest', true);
-        xhr.send(null);
-    }, 5000);
+    xhrPost.onreadystatechange = function(){
+        if (xhrPost.readyState === 4){
+            if (xhrPost.status === 200){
+                //
+                console.log('送信成功');
+            } else {
+                console.log('送信失敗');
+            }
+        } else {
+            console.log('接続できていない');
+        }
+    };
+    document.getElementById('submit').addEventListener('click', function(){
+        let user_id = document.getElementById('user_id');
+        let msg = document.getElementById('msg');
+        xhrPost.open('GET', '../rest/create/?user_id=' + encodeURIComponent(user_id.value) + '&msg=' + encodeURIComponent(msg.value), true);
+        xhrPost.send(null);
+    }, false);
+
+    
+    xhr.open('GET', '../rest', true);
+    xhr.send(null);
+
     
 }, false);

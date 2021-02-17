@@ -1,10 +1,16 @@
 li { list-style:none; margin:5px; padding:5px;}
 
-.comment {  border-radius:50px; background-color:rbg(4, 240, 4); display:inline-block;}
-
 .content {width:100%; height: 80%;}
 
-.msgPost {width:100%; text-align:center; position:fixed; z-index: 10; margin: 0 auto;}
+.msgPost {
+    height: 65px;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+}
 
 textarea {border-radius:50px;}
 
